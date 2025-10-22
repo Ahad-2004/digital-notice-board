@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 cd frontend
-npm ci
+npm install
 npm run build
