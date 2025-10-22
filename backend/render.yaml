@@ -1,0 +1,10 @@
+# Render.com service definition (for reference)
+services:
+  - type: web
+    name: digital-notice-backend
+    env: node
+    plan: free
+    buildCommand: "npm ci"
+    startCommand: "npm start"
+    repo: https://github.com/Ahad-2004/git-demo
+    branch: master
