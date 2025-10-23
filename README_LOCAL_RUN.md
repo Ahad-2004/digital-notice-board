@@ -28,6 +28,17 @@ Local dev
    # create a .env from .env.example and fill in FIREBASE_* values
    npm run dev
 
+   Helper: generate .env from Firebase service account
+
+   If you have the Firebase service account JSON, you can generate a properly escaped `.env` using the included helper script (PowerShell):
+
+   ```powershell
+   cd backend\scripts
+   node generateEnvFromServiceAccount.js "..\service-account.json" --out "..\.env"
+   ```
+
+   Replace `..\service-account.json` with the path to your downloaded service account JSON. This will create `backend/.env` with the PRIVATE_KEY escaped so Node/`firebase-admin` can parse it.
+
 Building for production
 
 - Frontend: from `frontend/` run `npm run build`. The dist output will be in `frontend/dist`.
